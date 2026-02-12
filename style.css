@@ -1,0 +1,201 @@
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* COLOR SYSTEM – SAME OLD COLOR */
+  :root {
+    --bg-main: linear-gradient(
+      135deg,
+      #6f7ae0 0%,
+      #6b74db 35%,
+      #7467d8 65%,
+      #7a5ccf 100%
+    );
+  
+    --bg-soft: linear-gradient(
+      135deg,
+      #7480e6 0%,
+      #7a72de 50%,
+      #8263d4 100%
+    );
+  
+    --text-main: #060202;
+    --text-soft: rgba(13, 7, 7, 0.88);
+  }
+  
+  /* COMMON SECTION */
+  section {
+    min-height: 100vh;
+    padding: 80px 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* SUBTLE LIGHT EFFECT */
+  section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      circle at top right,
+      rgba(255, 255, 255, 0.18),
+      transparent 60%
+    );
+    pointer-events: none;
+  }
+  
+  /* HEADINGS */
+  h1 {
+    font-size: 64px;
+    font-weight: 800;
+  }
+  
+  h2 {
+    font-size: 42px;
+    margin-bottom: 25px;
+  }
+  
+  p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: var(--text-soft);
+    max-width: 900px;
+  }
+  
+  /* HERO */
+  .hero {
+    background: var(--bg-main);
+    color: var(--text-main);
+    align-items: center;
+    text-align: center;
+  }
+  
+  .tagline {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+  
+  .hero button {
+    margin-top: 45px;
+    padding: 16px 42px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background: white;
+    color: #6f7ae0;
+    transition: 0.3s;
+  }
+  
+  .hero button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+  }
+  
+  /* ABOUT */
+  .about {
+    background: var(--bg-soft);
+    color: var(--text-main);
+  }
+  
+  /* SKILLS */
+  .skills {
+    background: var(--bg-main);
+    color: var(--text-main);
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 28px;
+  }
+  
+  .skill {
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 18px;
+    text-align: center;
+    font-size: 20px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+  }
+  
+  .skill:hover {
+    transform: translateY(-12px);
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  /* PROJECTS */
+  .projects {
+    background: var(--bg-soft);
+    color: var(--text-main);
+  }
+  
+  .project-card {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 32px;
+    border-radius: 18px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(12px);
+    transition: 0.3s;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.04);
+  }
+  
+  /* CONTACT */
+  .contact {
+    background: var(--bg-main);
+    color: var(--text-main);
+    text-align: center;
+  }
+  
+  .links {
+    margin-top: 35px;
+  }
+  
+  .links a {
+    margin: 0 18px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    opacity: 0.9;
+  }
+  
+  .links a:hover {
+    opacity: 1;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    section {
+      padding: 70px 8%;
+    }
+  
+    h1 {
+      font-size: 44px;
+    }
+  
+    h2 {
+      font-size: 34px;
+    }
+  
+    p {
+      font-size: 18px;
+    }
+  }
+  
