@@ -1,83 +1,461 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Deepesh Kumar Singh | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<title>Deepesh Kumar Singh — AI Research Engineer</title>
+<meta name="description" content="Deepesh Kumar Singh — AI Research Intern at IIT Mandi, working on Computer Vision, Depth Estimation, SLAM, NeRF and 3D Gaussian Splatting." />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Deepesh Kumar Singh</h1>
-    <p class="tagline">Building intelligent systems with real-world impact.</p>
-    <button id="cta">Explore More</button>
-  </section>
+<!-- grain / vignette overlays -->
+<div class="grain"></div>
 
-  <!-- ABOUT -->
-  <section class="about">
-    <h2>About Me</h2>
-    <p>
-      <p>
-        I am a Computer Science (AI & ML) student focused on building intelligent systems,
-        solving real-world problems, and creating technology that delivers real impact.
-        </p>
-        
-    </p>
-  </section>
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo">DKS<span class="dot">.</span></a>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#research">Research</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="resume.pdf" download class="nav-cta">Resume</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="nav-links-mobile" id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#research">Research</a>
+    <a href="#contact">Contact</a>
+    <a href="resume.pdf" download>Download Resume</a>
+  </nav>
+</header>
 
-  <!-- SKILLS -->
-  <section class="skills">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <div class="skill">HTML</div>
-      <div class="skill">CSS</div>
-      <div class="skill">JavaScript</div>
-      <div class="skill">Python</div>
-      <div class="skill">Machine Learning</div>
-      <div class="skill">Data Analysis</div>
-      <div class="skill">SQL</div>
+<!-- HERO -->
+<section class="hero" id="top">
+  <canvas id="nodeField"></canvas>
+  <div class="hero-glow hero-glow-1"></div>
+  <div class="hero-glow hero-glow-2"></div>
+  <div class="hero-content" data-reveal>
+    <p class="eyebrow mono">AI RESEARCH · COMPUTER VISION · ROBOTICS AI LAB, IIT MANDI</p>
+    <h1 class="hero-title">Deepesh Kumar<br><span class="grad-text">Singh</span></h1>
+    <p class="hero-role">AI Research Intern &nbsp;·&nbsp; AI &amp; ML Engineer &nbsp;·&nbsp; Computer Vision Enthusiast &nbsp;·&nbsp; Full Stack Developer</p>
+    <p class="hero-desc">Building intelligent AI systems using Computer Vision, Machine Learning, Robotics, and modern web technologies — from depth estimation and SLAM to 3D Gaussian Splatting.</p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="resume.pdf" download class="btn btn-ghost">Download Resume</a>
+      <a href="#contact" class="btn btn-text">Contact Me →</a>
     </div>
-  </section>
+  </div>
+  <div class="scroll-cue mono">SCROLL<span class="line"></span></div>
+</section>
 
-  <!-- PROJECTS -->
-  <section class="projects">
-    <h2>Projects</h2>
-
-    <div class="project-card">
-      <h3>Phishing Website Detection</h3>
-      <p>
-        Developed a machine learning-based system to identify and detect phishing
-        websites using URL and content-based features.
-      </p>
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container about-grid">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow mono">01 / ABOUT</p>
+      <h2>Researching how machines <span class="grad-text">see and understand</span> the world.</h2>
     </div>
-    
+    <div class="about-body" data-reveal>
+      <p>I'm a B.Tech Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning at Manav Rachna International Institute of Research and Studies (MRIIRS), India.</p>
+      <p>Currently, I work as an <strong>AI Research Intern at IIT Mandi</strong>, in the Robotics and AI Lab, where I focus on Computer Vision, Depth Estimation, Photogrammetry, SLAM, NeRF, and 3D Gaussian Splatting. I enjoy building intelligent software that bridges research and practical application — combining rigorous experimentation with production-grade engineering.</p>
+      <p>Beyond the lab, I stay sharp through hackathons, research projects, internships, and open-source contributions, and I'm always chasing the next hard problem in AI, ML, and robotics.</p>
+      <div class="about-stats">
+        <div class="stat"><span class="stat-num grad-text">3</span><span class="stat-label mono">Internships</span></div>
+        <div class="stat"><span class="stat-num grad-text">6</span><span class="stat-label mono">Projects Built</span></div>
+        <div class="stat"><span class="stat-num grad-text">1</span><span class="stat-label mono">Published Paper</span></div>
+        <div class="stat"><span class="stat-num grad-text">10+</span><span class="stat-label mono">Technologies</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <div class="project-card">
-      <h3>HR-MANAGEMENT SYSTEM</h3>
-      <p>USING NLP AND ML.</p>
+<!-- SKILLS -->
+<section class="section section-alt" id="skills">
+  <div class="container">
+    <div class="section-head center" data-reveal>
+      <p class="eyebrow mono">02 / TECHNICAL SKILLS</p>
+      <h2>A stack built for <span class="grad-text">research and production.</span></h2>
+    </div>
+    <div class="skills-grid" data-reveal>
+
+      <div class="skill-card">
+        <h3 class="mono">Programming Languages</h3>
+        <ul class="chip-list">
+          <li>Python</li><li>C++</li><li>JavaScript</li><li>HTML</li><li>CSS</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3 class="mono">AI &amp; Machine Learning</h3>
+        <ul class="chip-list">
+          <li>Machine Learning</li><li>Deep Learning</li><li>Computer Vision</li><li>OpenCV</li><li>PyTorch</li><li>TensorFlow</li><li>Scikit-learn</li><li>NumPy</li><li>Pandas</li>
+        </ul>
+      </div>
+
+      <div class="skill-card highlight">
+        <h3 class="mono">Computer Vision &amp; Robotics</h3>
+        <ul class="chip-list">
+          <li>Depth Estimation</li><li>Image Processing</li><li>Photogrammetry</li><li>SLAM</li><li>NeRF</li><li>3D Gaussian Splatting</li><li>Feature Matching</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3 class="mono">Web Development</h3>
+        <ul class="chip-list">
+          <li>React</li><li>Next.js</li><li>FastAPI</li><li>Node.js</li><li>Tailwind CSS</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3 class="mono">Databases</h3>
+        <ul class="chip-list">
+          <li>MySQL</li><li>MongoDB</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3 class="mono">Developer Tools</h3>
+        <ul class="chip-list">
+          <li>Git</li><li>GitHub</li><li>VS Code</li><li>Linux</li><li>Jupyter Notebook</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section" id="experience">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow mono">03 / EXPERIENCE</p>
+      <h2>Where the <span class="grad-text">research happens.</span></h2>
+    </div>
+    <div class="timeline" data-reveal>
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-card">
+          <p class="mono timeline-date">JUL 2026 — AUG 2026</p>
+          <h3>AI Research Intern</h3>
+          <p class="timeline-org">Indian Institute of Technology (IIT) Mandi — Robotics &amp; AI Lab</p>
+          <p>Researching Depth Estimation, Computer Vision, Photogrammetry, SLAM, NeRF, and 3D Gaussian Splatting for real-world 3D scene understanding.</p>
+          <ul class="chip-list small">
+            <li>Depth Estimation</li><li>SLAM</li><li>NeRF</li><li>3D Gaussian Splatting</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-card">
+          <p class="mono timeline-date">SUMMER ANALYTICS</p>
+          <h3>Summer Analytics Participant</h3>
+          <p class="timeline-org">Indian Institute of Technology Guwahati</p>
+          <p>Built a machine learning model for dynamic pricing of urban parking lots, using demand and occupancy signals to predict optimal pricing.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-card">
+          <p class="mono timeline-date">INTERNSHIP</p>
+          <h3>AI/ML Intern</h3>
+          <p class="timeline-org">Kodacy</p>
+          <p>Worked on AI and Machine Learning based projects, strengthening practical model-development and deployment skills.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section section-alt" id="projects">
+  <div class="container">
+    <div class="section-head center" data-reveal>
+      <p class="eyebrow mono">04 / FEATURED PROJECTS</p>
+      <h2>Things I've <span class="grad-text">built and shipped.</span></h2>
     </div>
 
-    <div class="project-card">
-      <h3>Phishing Website Detection</h3>
-      <p>Machine learning model to detect malicious websites.</p>
+    <div class="projects-grid" data-reveal>
+
+      <article class="project-card">
+        <div class="project-top">
+          <span class="project-index mono">01</span>
+          <div class="project-tags">
+            <span>Computer Vision</span><span>ML</span>
+          </div>
+        </div>
+        <h3>MirrorAI — AI Skin Analysis Platform</h3>
+        <p>An AI-powered virtual skincare platform that performs facial skin analysis using Computer Vision and Machine Learning — detecting skin conditions, estimating confidence scores, and generating personalized skincare recommendations through an interactive web interface.</p>
+        <ul class="feature-list">
+          <li>AI-powered skin analysis</li>
+          <li>Facial feature detection</li>
+          <li>Confidence-based predictions</li>
+          <li>Interactive consultation report</li>
+        </ul>
+        <ul class="chip-list small">
+          <li>Python</li><li>FastAPI</li><li>OpenCV</li><li>React / Next.js</li>
+        </ul>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <span class="project-index mono">02</span>
+          <div class="project-tags">
+            <span>Healthcare AI</span><span>CV</span>
+          </div>
+        </div>
+        <h3>AI Skin Health Analysis System</h3>
+        <p>A machine learning-based healthcare application that analyzes facial skin images to identify concerns like acne, pigmentation, dark circles, wrinkles, redness, pores, and hydration — generating structured reports with confidence scores and actionable recommendations.</p>
+        <ul class="feature-list">
+          <li>Automated facial skin assessment</li>
+          <li>ML-based condition detection</li>
+          <li>Confidence score visualization</li>
+        </ul>
+        <ul class="chip-list small">
+          <li>Python</li><li>OpenCV</li><li>FastAPI</li><li>NumPy</li>
+        </ul>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <span class="project-index mono">03</span>
+          <div class="project-tags">
+            <span>NLP</span><span>Explainable AI</span>
+          </div>
+        </div>
+        <h3>Smart Employee Review Analyzer</h3>
+        <p>An AI-powered HR Decision Support System that analyzes employee reviews and resumes using NLP, TF-IDF, Cosine Similarity, and Explainable AI (SHAP/LIME) to help HR professionals make informed hiring decisions. Published as a research paper.</p>
+        <ul class="chip-list small">
+          <li>Python</li><li>NLP</li><li>Scikit-learn</li><li>SHAP</li><li>LIME</li><li>FastAPI</li>
+        </ul>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <span class="project-index mono">04</span>
+          <div class="project-tags">
+            <span>Computer Vision</span><span>Depth</span>
+          </div>
+        </div>
+        <h3>DepthFusion</h3>
+        <p>A computer vision application for monocular depth estimation, background segmentation, image enhancement, and depth-aware visual effects using state-of-the-art deep learning models.</p>
+        <ul class="chip-list small">
+          <li>Python</li><li>OpenCV</li><li>PyTorch</li><li>Depth Anything</li>
+        </ul>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <span class="project-index mono">05</span>
+          <div class="project-tags">
+            <span>ML</span><span>Forecasting</span>
+          </div>
+        </div>
+        <h3>Dynamic Pricing for Urban Parking Lots</h3>
+        <p>A machine learning solution built during Summer Analytics at IIT Guwahati to predict optimal parking prices based on occupancy, demand, time, and historical usage patterns.</p>
+        <ul class="chip-list small">
+          <li>Python</li><li>Pandas</li><li>Scikit-learn</li>
+        </ul>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <span class="project-index mono">06</span>
+          <div class="project-tags">
+            <span>Computer Vision</span><span>AgriTech</span>
+          </div>
+        </div>
+        <h3>Plant Care Assistant</h3>
+        <p>An AI-powered application that detects plant diseases and provides treatment suggestions, using image classification and machine learning techniques.</p>
+        <ul class="chip-list small">
+          <li>Python</li><li>OpenCV</li><li>Scikit-learn</li>
+        </ul>
+      </article>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CONTACT -->
-  <section class="contact">
-    <h2>Contact</h2>
-    <p>Let’s build something powerful.</p>
-
-    <div class="links">
-      <a href="singhdeepesh0556@gmail.com">Email</a>
-      <a href="https://github.com/DEEPESH468" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/deepesh-kumar-singh-690373324/" target="_blank">LinkedIn</a>
-  
+<!-- RESEARCH -->
+<section class="section" id="research">
+  <div class="container research-grid">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow mono">05 / RESEARCH INTERESTS</p>
+      <h2>Problems I want to <span class="grad-text">spend a career on.</span></h2>
+      <p class="research-desc">My research sits at the intersection of 3D scene understanding and generative modeling — teaching machines to reconstruct, interpret, and reason about the physical world from visual data.</p>
     </div>
-  </section>
+    <div class="research-tags" data-reveal>
+      <span>Artificial Intelligence</span>
+      <span>Machine Learning</span>
+      <span>Computer Vision</span>
+      <span>Robotics</span>
+      <span>Depth Estimation</span>
+      <span>Photogrammetry</span>
+      <span>SLAM</span>
+      <span>NeRF</span>
+      <span>3D Gaussian Splatting</span>
+      <span>Generative AI</span>
+    </div>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<!-- ACHIEVEMENTS / CERTIFICATIONS -->
+<section class="section section-alt" id="achievements">
+  <div class="container">
+    <div class="section-head center" data-reveal>
+      <p class="eyebrow mono">06 / ACHIEVEMENTS &amp; CERTIFICATIONS</p>
+      <h2>Milestones along <span class="grad-text">the way.</span></h2>
+    </div>
+    <div class="achievements-grid" data-reveal>
+      <div class="achievement-card">
+        <span class="achievement-icon">🔬</span>
+        <h3>AI Research Internship</h3>
+        <p>Robotics &amp; AI Lab, IIT Mandi</p>
+      </div>
+      <div class="achievement-card">
+        <span class="achievement-icon">📊</span>
+        <h3>Summer Analytics Participant</h3>
+        <p>IIT Guwahati</p>
+      </div>
+      <div class="achievement-card">
+        <span class="achievement-icon">📄</span>
+        <h3>Published Research Paper</h3>
+        <p>"Smart Employee Review Analyzer: An AI-Driven HR Decision Support System Using NLP and Explainable AI"</p>
+      </div>
+      <div class="achievement-card">
+        <span class="achievement-icon">🏆</span>
+        <h3>Hackathon Participant</h3>
+        <p>Competitive build sprints across AI &amp; web tracks</p>
+      </div>
+      <div class="achievement-card">
+        <span class="achievement-icon">🌐</span>
+        <h3>Open Source Contributor</h3>
+        <p>Active on GitHub across AI &amp; ML repositories</p>
+      </div>
+      <div class="achievement-card">
+        <span class="achievement-icon">🎓</span>
+        <h3>B.Tech CSE (AI &amp; ML)</h3>
+        <p>Manav Rachna International Institute of Research and Studies</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GITHUB STATS -->
+<section class="section" id="github">
+  <div class="container">
+    <div class="section-head center" data-reveal>
+      <p class="eyebrow mono">07 / GITHUB ACTIVITY</p>
+      <h2>Code, <span class="grad-text">committed.</span></h2>
+    </div>
+    <div class="github-grid" data-reveal>
+      <img class="github-stat" src="https://github-readme-stats.vercel.app/api?username=DEEPESH468&show_icons=true&theme=transparent&hide_border=true&title_color=8b5cf6&icon_color=22d3ee&text_color=8f97ae" alt="Deepesh Kumar Singh's GitHub stats" loading="lazy" />
+      <img class="github-stat" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DEEPESH468&layout=compact&theme=transparent&hide_border=true&title_color=8b5cf6&text_color=8f97ae" alt="Deepesh Kumar Singh's most used languages" loading="lazy" />
+    </div>
+    <p class="github-cta mono"><a href="https://github.com/DEEPESH468" target="_blank" rel="noopener">→ github.com/DEEPESH468</a></p>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="section section-alt" id="education">
+  <div class="container education-wrap">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow mono">08 / EDUCATION</p>
+      <h2>Foundation.</h2>
+    </div>
+    <div class="education-card" data-reveal>
+      <h3>Bachelor of Technology (B.Tech)</h3>
+      <p class="edu-major">Computer Science Engineering — Artificial Intelligence &amp; Machine Learning</p>
+      <p class="edu-org mono">Manav Rachna International Institute of Research and Studies</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact-section" id="contact">
+  <div class="hero-glow hero-glow-1"></div>
+  <div class="container">
+    <div class="section-head center" data-reveal>
+      <p class="eyebrow mono">09 / CONTACT</p>
+      <h2>Let's build something <span class="grad-text">intelligent together.</span></h2>
+      <p class="research-desc">Open to internships, research collaborations, and software engineering roles. Reach out — I usually reply within a day.</p>
+    </div>
+
+    <div class="contact-grid" data-reveal>
+      <form class="contact-form glass" id="contactForm">
+        <div class="form-row">
+          <label for="name" class="mono">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="form-row">
+          <label for="email" class="mono">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="form-row">
+          <label for="message" class="mono">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about the opportunity or idea..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary full">Send Message</button>
+        <p class="form-note mono" id="formNote"></p>
+      </form>
+
+      <div class="contact-links">
+        <a class="contact-link glass" href="mailto:singhdeepesh0556@gmail.com">
+          <span class="mono">EMAIL</span>
+          <strong>singhdeepesh0556@gmail.com</strong>
+        </a>
+        <a class="contact-link glass" href="https://github.com/DEEPESH468" target="_blank" rel="noopener">
+          <span class="mono">GITHUB</span>
+          <strong>github.com/DEEPESH468</strong>
+        </a>
+        <a class="contact-link glass" href="https://www.linkedin.com/in/deepesh-kumar-singh-690373324/" target="_blank" rel="noopener">
+          <span class="mono">LINKEDIN</span>
+          <strong>deepesh-kumar-singh</strong>
+        </a>
+        <a class="contact-link glass" href="resume.pdf" download>
+          <span class="mono">RESUME</span>
+          <strong>Download PDF</strong>
+        </a>
+        <div class="contact-link glass static">
+          <span class="mono">LOCATION</span>
+          <strong>India</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p class="mono">© <span id="year"></span> Deepesh Kumar Singh — Built with intent.</p>
+    <div class="footer-links">
+      <a href="https://github.com/DEEPESH468" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/deepesh-kumar-singh-690373324/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:singhdeepesh0556@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
 </body>
 </html>
