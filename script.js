@@ -38,14 +38,39 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-/* ---------------- Contact form (static demo) ---------------- */
+/* ---------------- Contact form ---------------- */
 const contactForm = document.getElementById('contactForm');
 const formNote = document.getElementById('formNote');
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   const name = document.getElementById('name').value.trim();
-  formNote.textContent = `Thanks${name ? ', ' + name : ''} — this form isn't wired to a backend yet. Please email me directly at singhdeepesh0556@gmail.com.`;
-  contactForm.reset();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  if (!name || !email || !message) {
+    formNote.textContent = 'Please fill in all fields before sending your message.';
+    return;
+  }
+
+  formNote.textContent = 'Sending message...';
+
+  try {
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, message })
+    });
+
+    const data = await response.json();
+    if (data.success) {
+      formNote.textContent = `Thanks${name ? ', ' + name : ''} — your message has been sent successfully.`;
+      contactForm.reset();
+    } else {
+      formNote.textContent = data.error || 'Unable to send message at this time. Please try again later.';
+    }
+  } catch (error) {
+    formNote.textContent = 'Unable to send message at this time. Please try again later.';
+  }
 });
 
 function githubFallback(img) {
