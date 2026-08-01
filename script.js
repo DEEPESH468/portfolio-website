@@ -48,6 +48,30 @@ contactForm.addEventListener('submit', (e) => {
   contactForm.reset();
 });
 
+function githubFallback(img) {
+  if (!img || img.dataset.fallbackApplied) return true;
+  img.dataset.fallbackApplied = 'true';
+  img.style.display = 'none';
+
+  const fallback = document.createElement('div');
+  fallback.className = 'github-fallback';
+  const title = img.alt.includes('most used')
+    ? 'Language stats unavailable right now'
+    : 'GitHub activity stats unavailable right now';
+  const text = img.alt.includes('most used')
+    ? 'This language chart could not load from the external GitHub stats service.'
+    : 'This GitHub activity card could not load from the external service.';
+
+  fallback.innerHTML = `
+    <div class="github-fallback-title">${title}</div>
+    <div class="github-fallback-text">${text} You can still visit my profile for the latest activity.</div>
+    <a class="github-fallback-link" href="https://github.com/DEEPESH468" target="_blank" rel="noopener">View GitHub profile</a>
+  `;
+
+  img.parentElement.appendChild(fallback);
+  return true;
+}
+
 /* ==========================================================================
    Signature element: SLAM-style feature-point node field
    Nodes drift and connect like matched feature points / a sparse point cloud —

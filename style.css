@@ -278,7 +278,12 @@ h3 { font-size: 1.15rem; }
 
 /* ================= GITHUB ================= */
 .github-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.github-stat { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); }
+.github-stat { width: 100%; border-radius: var(--radius); border: 1px solid var(--border); min-height: 260px; }
+.github-fallback { display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 260px; padding: 28px; border-radius: var(--radius); border: 1px dashed var(--border); background: rgba(255,255,255,0.02); text-align: center; }
+.github-fallback-title { color: var(--text); font-weight: 600; margin-bottom: 8px; }
+.github-fallback-text { color: var(--text-dim); margin-bottom: 14px; font-size: 0.95rem; max-width: 320px; }
+.github-fallback-link { color: var(--cyan); text-decoration: none; font-weight: 500; }
+.github-fallback-link:hover { text-decoration: underline; }
 .github-cta { text-align: center; margin-top: 24px; }
 .github-cta a { color: var(--cyan); text-decoration: none; }
 .github-cta a:hover { text-decoration: underline; }
